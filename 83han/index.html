@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>경제의 밤:</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .economic-seminar-main-wrapper {
+            font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+            line-height: 1.7;
+            background: linear-gradient(135deg, #0f1419 0%, #1a2332 50%, #2d3748 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .hero-banner-seminar-section {
+            padding: 60px 25px 80px;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(59,130,246,0.15) 0%, rgba(147,51,234,0.15) 100%);
+            border-bottom: 4px solid #3b82f6;
+            position: relative;
+        }
+
+        .hero-banner-seminar-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="70" r="1" fill="rgba(255,255,255,0.1)"/></svg>');
+            pointer-events: none;
+        }
+
+        .primary-heading-economic-seminar {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 25px;
+            background: linear-gradient(45deg, #3b82f6, #8b5cf6, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: title-glow-animation 3s ease-in-out infinite alternate;
+            position: relative;
+            z-index: 1;
+        }
+
+        @keyframes title-glow-animation {
+            0% { 
+                transform: scale(1);
+                filter: brightness(1);
+            }
+            100% { 
+                transform: scale(1.02);
+                filter: brightness(1.1);
+            }
+        }
+
+        .expert-analysis-image-wrapper {
+            margin: 35px 0;
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+            transform: perspective(1000px) rotateY(0deg);
+            transition: all 0.4s ease;
+        }
+
+        .expert-analysis-image-wrapper:hover {
+            transform: perspective(1000px) rotateY(5deg) scale(1.03);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+        }
+
+        .seminar-expert-profile-image {
+            width: 100%;
+            height: auto;
+            max-width: 450px;
+            border-radius: 20px;
+            transition: transform 0.4s ease;
+        }
+
+        .cta-primary-action-button {
+            background: linear-gradient(45deg, #10b981, #34d399);
+            color: white;
+            padding: 20px 50px;
+            border: none;
+            border-radius: 35px;
+            font-size: 19px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(16,185,129,0.4);
+            transition: all 0.3s ease;
+            animation: cta-pulse-effect 2.5s ease-in-out infinite alternate;
+            position: relative;
+            z-index: 1;
+        }
+
+        @keyframes cta-pulse-effect {
+            0% { 
+                box-shadow: 0 10px 30px rgba(16,185,129,0.4);
+                transform: translateY(0);
+            }
+            100% { 
+                box-shadow: 0 15px 40px rgba(16,185,129,0.7);
+                transform: translateY(-2px);
+            }
+        }
+
+        .cta-primary-action-button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 50px rgba(16,185,129,0.6);
+            background: linear-gradient(45deg, #059669, #10b981);
+        }
+
+        .market-confusion-analysis-section {
+            padding: 70px 25px;
+            background: linear-gradient(135deg, rgba(239,68,68,0.1) 0%, rgba(245,101,101,0.1) 100%);
+            position: relative;
+        }
+
+        .market-confusion-analysis-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #ef4444, transparent);
+        }
+
+        .confusion-analysis-heading {
+            font-size: 26px;
+            text-align: center;
+            margin-bottom: 35px;
+            color: #fbbf24;
+            font-weight: 700;
+        }
+
+        .market-analysis-content-text {
+            font-size: 17px;
+            background: rgba(255,255,255,0.08);
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            max-width: 700px;
+            margin: 0 auto 35px;
+            border: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+        }
+
+        .market-analysis-content-text::before {
+            content: '💡';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            background: #1f2937;
+            padding: 5px 10px;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+
+        .investment-misconception-section {
+            padding: 70px 25px;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(168,85,247,0.1) 0%, rgba(196,181,253,0.1) 100%);
+        }
+
+        .misconception-analysis-heading {
+            font-size: 26px;
+            margin-bottom: 25px;
+            color: #a855f7;
+            font-weight: 700;
+        }
+
+        .investment-strategy-explanation {
+            font-size: 17px;
+            background: rgba(255,255,255,0.08);
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            max-width: 700px;
+            margin: 0 auto 35px;
+            border-left: 5px solid #a855f7;
+        }
+
+        .anxiety-relief-solution-section {
+            padding: 70px 25px;
+            background: linear-gradient(135deg, rgba(6,182,212,0.1) 0%, rgba(34,197,94,0.1) 100%);
+        }
+
+        .anxiety-solution-heading {
+            font-size: 26px;
+            text-align: center;
+            margin-bottom: 35px;
+            color: #06b6d4;
+            font-weight: 700;
+        }
+
+        .solution-strategy-content {
+            font-size: 17px;
+            background: rgba(255,255,255,0.08);
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            max-width: 700px;
+            margin: 0 auto 35px;
+            border: 1px solid rgba(6,182,212,0.3);
+        }
+
+        .seminar-details-information-section {
+            padding: 70px 25px;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(251,191,36,0.1) 0%, rgba(245,158,11,0.1) 100%);
+        }
+
+        .seminar-info-heading {
+            font-size: 26px;
+            margin-bottom: 35px;
+            color: #fbbf24;
+            font-weight: 700;
+        }
+
+        .seminar-participation-details {
+            background: rgba(255,255,255,0.08);
+            padding: 35px;
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            max-width: 600px;
+            margin: 0 auto 35px;
+            border: 2px solid rgba(251,191,36,0.3);
+        }
+
+        .gratitude-message-section {
+            padding: 50px 25px;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(34,197,94,0.1) 0%, rgba(16,185,129,0.1) 100%);
+        }
+
+        .floating-cta-button-container {
+            position: fixed;
+            bottom: 25px;
+            left: 15px;
+            right: 15px;
+            z-index: 1000;
+        }
+
+        .floating-breathing-cta-button {
+            background: linear-gradient(45deg, #10b981, #059669);
+            color: white;
+            padding: 22px 25px;
+            border: none;
+            border-radius: 50px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(16,185,129,0.5);
+            animation: floating-breath-animation 2.5s ease-in-out infinite;
+            white-space: normal;
+            word-wrap: break-word;
+            text-align: center;
+            line-height: 1.5;
+            width: 100%;
+            min-height: 75px;
+        }
+
+        @keyframes floating-breath-animation {
+            0%, 100% { 
+                transform: scale(1);
+                box-shadow: 0 10px 30px rgba(16,185,129,0.5);
+            }
+            50% { 
+                transform: scale(1.05);
+                box-shadow: 0 15px 40px rgba(16,185,129,0.8);
+            }
+        }
+
+        .risk-disclosure-compliance-section {
+            padding: 50px 25px;
+            background: rgba(0,0,0,0.4);
+            border-top: 3px solid #f59e0b;
+            margin-top: 60px;
+        }
+
+        .risk-warning-main-heading {
+            font-size: 22px;
+            color: #f59e0b;
+            text-align: center;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .compliance-risk-statements-list {
+            list-style: none;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .individual-risk-statement {
+            margin: 12px 0;
+            padding: 12px 0;
+            font-size: 15px;
+            color: #d1d5db;
+            line-height: 1.6;
+        }
+
+        .footer-copyright-legal-section {
+            text-align: center;
+            padding: 25px 25px 120px;
+            background: rgba(0,0,0,0.6);
+            border-top: 1px solid #374151;
+        }
+
+        .legal-links-navigation {
+            color: #3b82f6;
+            text-decoration: underline;
+            margin: 0 20px;
+            font-size: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .legal-links-navigation:hover {
+            color: #60a5fa;
+        }
+
+        .copyright-text-information {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #9ca3af;
+        }
+
+        /* PC 데스크톱 스타일 */
+        @media (min-width: 1024px) {
+            .economic-seminar-main-wrapper {
+                max-width: 1400px;
+                margin: 0 auto;
+            }
+            
+            .hero-banner-seminar-section {
+                padding: 100px 50px 120px;
+            }
+            
+            .primary-heading-economic-seminar {
+                font-size: 42px;
+                margin-bottom: 40px;
+            }
+            
+            .market-confusion-analysis-section,
+            .investment-misconception-section,
+            .anxiety-relief-solution-section,
+            .seminar-details-information-section {
+                padding: 100px 50px;
+            }
+            
+            .market-analysis-content-text,
+            .investment-strategy-explanation,
+            .solution-strategy-content {
+                max-width: 900px;
+                padding: 40px;
+            }
+            
+            .seminar-expert-profile-image {
+                max-width: 550px;
+            }
+            
+            .cta-primary-action-button {
+                padding: 25px 60px;
+                font-size: 21px;
+            }
+            
+            .floating-breathing-cta-button {
+                max-width: 500px;
+                margin: 0 auto;
+                padding: 25px 40px;
+                font-size: 18px;
+            }
+            
+            .floating-cta-button-container {
+                left: 50%;
+                right: auto;
+                transform: translateX(-50%);
+                width: 500px;
+            }
+        }
+
+        /* 태블릿 스타일 */
+        @media (min-width: 769px) and (max-width: 1023px) {
+            .hero-banner-seminar-section {
+                padding: 80px 40px 100px;
+            }
+            
+            .primary-heading-economic-seminar {
+                font-size: 36px;
+            }
+            
+            .market-confusion-analysis-section,
+            .investment-misconception-section,
+            .anxiety-relief-solution-section,
+            .seminar-details-information-section {
+                padding: 80px 40px;
+            }
+            
+            .market-analysis-content-text,
+            .solution-strategy-content {
+                max-width: 650px;
+            }
+        }
+
+        /* 모바일 스타일 */
+        @media (max-width: 768px) {
+            .primary-heading-economic-seminar {
+                font-size: 28px;
+                margin-bottom: 4px;
+            }
+            
+            .confusion-analysis-heading,
+            .misconception-analysis-heading,
+            .anxiety-solution-heading,
+            .seminar-info-heading {
+                font-size: 22px;
+                margin-bottom: 4px;
+            }
+            
+            .hero-banner-seminar-section {
+                padding: 20px 20px 25px;
+                margin-bottom: 4px;
+            }
+            
+            .market-confusion-analysis-section,
+            .investment-misconception-section,
+            .anxiety-relief-solution-section,
+            .seminar-details-information-section {
+                padding: 20px 20px;
+                margin-bottom: 4px;
+            }
+            
+            .market-analysis-content-text,
+            .investment-strategy-explanation,
+            .solution-strategy-content,
+            .seminar-participation-details {
+                padding: 20px;
+                margin: 4px auto;
+            }
+            
+            .expert-analysis-image-wrapper {
+                margin: 4px 0;
+            }
+            
+            .gratitude-message-section {
+                padding: 20px 20px;
+                margin-bottom: 4px;
+            }
+            
+            .risk-disclosure-compliance-section {
+                padding: 20px 20px;
+                margin-top: 4px;
+            }
+            
+            .footer-copyright-legal-section {
+                padding: 20px;
+            }
+            
+            /* 버튼 컨테이너 간격 조정 */
+            div[style*="text-align: center"] {
+                margin-top: 4px;
+                margin-bottom: 4px;
+            }
+        }
+
+        /* 다크 모드 지원 */
+        @media (prefers-color-scheme: dark) {
+            .economic-seminar-main-wrapper {
+                background: linear-gradient(135deg, #0f1419 0%, #1a2332 50%, #2d3748 100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="economic-seminar-main-wrapper">
+        <!-- 히어로 섹션 -->
+        <section class="hero-banner-seminar-section">
+            <h1 class="primary-heading-economic-seminar">
+                경제의 밤: 홍춘욱 박사와 함께하는 무료 온라인 세미나
+            </h1>
+            
+            <div class="expert-analysis-image-wrapper">
+                <img src="img/1.jpg" alt="홍춘욱 박사 경제 세미나" class="seminar-expert-profile-image">
+            </div>
+            
+            <button class="cta-primary-action-button" onclick="r2()">
+                지금 가입하기
+            </button>
+        </section>
+
+        <!-- 시장 혼란 분석 섹션 -->
+        <section class="market-confusion-analysis-section">
+            <h2 class="confusion-analysis-heading">경제 상황이 복잡하고 혼란스러워 명확한 투자 방향을 찾기 어려우신가요?</h2>
+            <div class="market-analysis-content-text">
+                이 빠르게 변화하는 시대에 글로벌 시장의 변동성은 많은 사람들에게 혼란과 불안을 가져다줍니다. 이런 불확실성 속에서 기회를 찾는 방법을 생각해보신 적이 있으신가요? 내일의 세미나는 여러분에게 답을 제시하고, 사고를 정리하며 혼란에서 벗어날 수 있도록 도와드릴 것입니다.
+            </div>
+            
+            <div style="text-align: center;">
+                <button class="cta-primary-action-button" onclick="r2()">
+                    지금 가입하기
+                </button>
+            </div>
+        </section>
+
+        <!-- 투자 오해 섹션 -->
+        <section class="investment-misconception-section">
+            <h2 class="misconception-analysis-heading">많은 사람들이 경제 분석은 전문 투자자들만을 위한 것이라고 생각합니다.</h2>
+            <div class="investment-strategy-explanation">
+                실제로는 일반 투자자들도 경제 동향을 이해하고 효과적인 전략을 통해 현명한 결정을 내릴 수 있습니다. 경제학은 결코 도달할 수 없는 학문이 아닙니다. 기본적인 분석 도구와 사고방식을 익히면 여러분도 시장에서 자유자재로 활동할 수 있습니다.
+            </div>
+            
+            <div class="expert-analysis-image-wrapper">
+                <img src="img/2.jpg" alt="경제 분석 전문가" class="seminar-expert-profile-image">
+            </div>
+            
+            <div style="text-align: center;">
+                <button class="cta-primary-action-button" onclick="r2()">
+                    지금 가입하기
+                </button>
+            </div>
+        </section>
+
+        <!-- 불안 해결 솔루션 섹션 -->
+        <section class="anxiety-relief-solution-section">
+            <h2 class="anxiety-solution-heading">인플레이션과 경제 변동성에 직면해 불안과 무력감을 느끼고 계신가요?</h2>
+            <div class="solution-strategy-content">
+                이런 환경에서 많은 사람들이 고립무원의 상황을 느끼며, 적절한 투자 기회를 찾지 못하고, 전문 지식 부족으로 인해 시장의 잠재력을 놓칠 수 있습니다. 복잡한 시장에서 냉정함을 유지하고 자신에게 맞는 투자 전략을 찾는 것이 시급히 해결해야 할 문제가 되었습니다.
+            </div>
+        </section>
+
+        <!-- 세미나 솔루션 제공 섹션 -->
+        <section class="seminar-details-information-section">
+            <h2 class="seminar-info-heading">홍박사의 "경제의 밤" 온라인 세미나에 참여하여 2025년 글로벌 시장의 심층 분석과 실용적인 투자 전략을 얻으세요!</h2>
+            <div class="solution-strategy-content">
+                이번 세미나에서 홍박사는 미래 시장에 대한 독창적인 통찰력을 공유하여 현재 경제 상황과 투자에 미치는 영향을 이해할 수 있도록 도와드릴 것입니다. 그는 채택해야 할 투자 전략을 자세히 해석하여 미래 시장에서 기회를 포착할 수 있도록 도와드릴 것입니다.
+            </div>
+            
+            <div class="expert-analysis-image-wrapper">
+                <img src="img/3.jpg" alt="홍춘욱 박사 경제 세미나" class="seminar-expert-profile-image">
+            </div>
+            
+            <div style="text-align: center;">
+                <button class="cta-primary-action-button" onclick="r2()">
+                    지금 가입하기
+                </button>
+            </div>
+        </section>
+
+        <!-- 세미나 참여 정보 섹션 -->
+        <section class="seminar-details-information-section">
+            <div class="seminar-participation-details">
+                <h3 style="font-size: 20px; margin-bottom: 20px; color: #fbbf24;">세미나 형식: 온라인 실시간 상호작용 세미나</h3>
+                <p style="font-size: 16px; margin-bottom: 15px;">참여 방법: 아래 버튼을 클릭하시면 회의 링크와 참여 가이드를 받으실 수 있습니다.</p>
+                <p style="font-size: 18px; font-weight: bold; color: #10b981;">지금 등록하여 투자 미래를 바꿀 수 있는 이 기회를 잡으세요. 내일 저녁에 만나요!</p>
+            </div>
+            
+            <div style="text-align: center;">
+                <button class="cta-primary-action-button" onclick="r2()">
+                    지금 가입하기
+                </button>
+            </div>
+        </section>
+
+        <!-- 감사 메시지 섹션 -->
+        <section class="gratitude-message-section">
+            <h2 style="font-size: 24px; color: #10b981; font-weight: 700;">여러분의 지지에 감사드리며, 함께 경제의 신비를 탐구해보아요!</h2>
+        </section>
+
+        <!-- 위험 공개 섹션 -->
+        <section class="risk-disclosure-compliance-section">
+            <h3 class="risk-warning-main-heading">⚠️ 중요한 위험 공개</h3>
+            <ul class="compliance-risk-statements-list">
+                <li class="individual-risk-statement">• 본 세미나는 일반적인 경제 정보 및 교육 목적으로만 제공되며, 개별 투자 자문이나 권유를 구성하지 않습니다.</li>
+                <li class="individual-risk-statement">• 모든 투자에는 위험이 따르며, 투자 원금의 일부 또는 전부를 잃을 가능성이 있습니다.</li>
+                <li class="individual-risk-statement">• 세미나에서 제시되는 모든 정보는 과거 데이터 분석을 기반으로 하며, 미래 수익을 보장하지 않습니다.</li>
+                <li class="individual-risk-statement">• 투자자는 본인의 위험 허용 수준과 재정 상황을 고려하여 신중하게 결정해야 합니다.</li>
+                <li class="individual-risk-statement">• 투자 결정을 내리기 전에 반드시 자격을 갖춘 금융 전문가와 상담하시기 바랍니다.</li>
+                <li class="individual-risk-statement">• 본 세미나의 내용은 객관적인 정보 제공을 목적으로 하며, 특정 투자 상품에 대한 권유나 보증을 포함하지 않습니다.</li>
+            </ul>
+        </section>
+
+        <!-- 푸터 -->
+        <footer class="footer-copyright-legal-section">
+            <a href="Privacy.html" class="legal-links-navigation">개인정보처리방침</a>
+            <a href="terms.html" class="legal-links-navigation">이용약관</a>
+            <a href="warn.html" class="legal-links-navigation">위험 경고</a>
+            <div class="copyright-text-information">
+                © 2025 경제의 밤 세미나. 모든 권리 보유. | 본 사이트의 모든 콘텐츠는 저작권법의 보호를 받습니다.
+            </div>
+        </footer>
+
+        <!-- 플로팅 버튼 -->
+        <div class="floating-cta-button-container">
+            <button class="floating-breathing-cta-button" onclick="r2()">
+                "2"를 발송하여 귀하의 자리를 확보하세요
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function r2() {
+            // Band 연결 또는 기타 액션
+            console.log('Band 연결 처리가 실행되었습니다');
+            // 실제 Band URL 또는 처리를 여기에 추가
+        }
+
+        // 다크 모드 지원
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+
+        // 부드러운 스크롤 효과
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                // 버튼 클릭 시 시각적 피드백
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
+        });
+
+        // 스크롤 애니메이션
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // 섹션들에 애니메이션 적용
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>

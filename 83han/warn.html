@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>위험 경고 - 경제의 밤 세미나</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .risk-warning-main-container {
+            font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+            line-height: 1.8;
+            background: linear-gradient(135deg, #0f1419 0%, #1a2332 50%, #2d3748 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            padding: 40px 20px 120px;
+        }
+
+        .risk-warning-header-section {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 40px 0;
+            border-bottom: 3px solid #ef4444;
+            background: rgba(239,68,68,0.1);
+            border-radius: 15px;
+        }
+
+        .risk-warning-main-title {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, #ef4444, #f87171);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .risk-warning-subtitle {
+            font-size: 18px;
+            color: #fbbf24;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .risk-warning-last-updated {
+            font-size: 16px;
+            color: #9ca3af;
+            margin-bottom: 10px;
+        }
+
+        .risk-warning-content-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.05);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(239,68,68,0.3);
+        }
+
+        .risk-section-heading {
+            font-size: 24px;
+            font-weight: 700;
+            margin: 30px 0 20px 0;
+            color: #ef4444;
+            border-left: 4px solid #ef4444;
+            padding-left: 15px;
+        }
+
+        .risk-section-heading:first-child {
+            margin-top: 0;
+        }
+
+        .risk-content-paragraph {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #e5e7eb;
+            line-height: 1.7;
+        }
+
+        .risk-list-items {
+            list-style: none;
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+
+        .risk-list-item {
+            margin: 15px 0;
+            padding: 12px 0;
+            position: relative;
+            color: #d1d5db;
+            border-bottom: 1px solid rgba(239,68,68,0.2);
+            padding-bottom: 15px;
+        }
+
+        .risk-list-item::before {
+            content: "⚠️";
+            position: absolute;
+            left: -25px;
+            font-size: 16px;
+        }
+
+        .risk-subsection-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 25px 0 15px 0;
+            color: #fbbf24;
+        }
+
+        .high-risk-warning-box {
+            background: rgba(239,68,68,0.2);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 2px solid #ef4444;
+            position: relative;
+        }
+
+        .high-risk-warning-box::before {
+            content: "🚨";
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            background: #1f2937;
+            padding: 5px 10px;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+
+        .medium-risk-notice {
+            background: rgba(245,158,11,0.1);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 25px 0;
+            border-left: 4px solid #f59e0b;
+        }
+
+        .disclaimer-box {
+            background: rgba(6,182,212,0.1);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 1px solid rgba(6,182,212,0.3);
+        }
+
+        .legal-compliance-box {
+            background: rgba(168,85,247,0.1);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 1px solid rgba(168,85,247,0.3);
+        }
+
+        .back-to-main-button {
+            background: linear-gradient(45deg, #ef4444, #dc2626);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 30px auto 0;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .back-to-main-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(239,68,68,0.4);
+        }
+
+        .emphasis-text {
+            font-weight: bold;
+            color: #fbbf24;
+            font-size: 18px;
+        }
+
+        @media (max-width: 768px) {
+            .risk-warning-main-container {
+                padding: 20px 15px 100px;
+            }
+            
+            .risk-warning-content-wrapper {
+                padding: 25px;
+            }
+            
+            .risk-warning-main-title {
+                font-size: 26px;
+            }
+            
+            .risk-section-heading {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="risk-warning-main-container">
+        <div class="risk-warning-header-section">
+            <h1 class="risk-warning-main-title">⚠️ 중요한 위험 경고</h1>
+            <p class="risk-warning-subtitle">투자 및 경제 세미나 참여 전 필독사항</p>
+            <p class="risk-warning-last-updated">최종 업데이트: 2024년 12월 16일</p>
+            <p style="color: #9ca3af; font-size: 14px;">경제의 밤: 홍춘욱 박사 무료 온라인 세미나</p>
+        </div>
+
+        <div class="risk-warning-content-wrapper">
+            <div class="high-risk-warning-box">
+                <h2 style="color: #ef4444; font-size: 20px; margin-bottom: 15px; font-weight: bold;">
+                    🚨 최우선 주의사항
+                </h2>
+                <p class="emphasis-text">
+                    본 세미나는 교육 목적으로만 제공되며, 어떠한 형태의 투자 권유나 매매 신호도 포함하지 않습니다. 
+                    모든 투자 결정은 참가자 본인의 전적인 책임하에 이루어져야 합니다.
+                </p>
+            </div>
+
+            <h2 class="risk-section-heading">1. 투자 위험에 대한 일반적 경고</h2>
+            <p class="risk-content-paragraph">
+                금융 시장 투자는 본질적으로 높은 위험을 수반하며, 투자 원금의 전부 또는 일부를 잃을 가능성이 있습니다. 
+                과거의 성과는 미래 수익을 보장하지 않으며, 시장 상황에 따라 예상과 다른 결과가 발생할 수 있습니다.
+            </p>
+            <ul class="risk-list-items">
+                <li class="risk-list-item">시장 위험: 경제 상황, 정치적 불안정, 자연재해 등으로 인한 시장 전체의 하락 위험</li>
+                <li class="risk-list-item">유동성 위험: 투자 상품을 원하는 시점에 적절한 가격으로 매도하지 못할 위험</li>
+                <li class="risk-list-item">인플레이션 위험: 물가 상승으로 인한 실질 구매력 감소 위험</li>
+                <li class="risk-list-item">환율 위험: 외화 투자 시 환율 변동으로 인한 손실 위험</li>
+                <li class="risk-list-item">신용 위험: 투자 대상의 신용도 하락으로 인한 손실 위험</li>
+            </ul>
+
+            <h2 class="risk-section-heading">2. 세미나 내용의 제한사항</h2>
+            <div class="medium-risk-notice">
+                <p class="risk-content-paragraph">
+                    <strong>본 세미나에서 제공되는 모든 정보는 다음과 같은 제한사항이 있습니다:</strong>
+                </p>
+                <ul class="risk-list-items">
+                    <li class="risk-list-item">교육 및 정보 제공 목적으로만 사용되어야 하며, 투자 조언으로 해석되어서는 안 됩니다</li>
+                    <li class="risk-list-item">개별 투자자의 재정 상황, 투자 목표, 위험 허용도를 고려하지 않은 일반적 정보입니다</li>
+                    <li class="risk-list-item">시장 상황의 급변으로 인해 세미나 내용이 현실과 다를 수 있습니다</li>
+                    <li class="risk-list-item">강연자의 개인적 견해가 포함되어 있을 수 있으며, 이는 절대적 사실이 아닙니다</li>
+                </ul>
+            </div>
+
+            <h2 class="risk-section-heading">3. 개인 책임 및 의무</h2>
+            <p class="risk-content-paragraph">
+                세미나 참가자는 다음 사항을 인지하고 동의해야 합니다:
+            </p>
+            <ul class="risk-list-items">
+                <li class="risk-list-item">모든 투자 결정은 본인의 독립적인 판단에 의해 이루어져야 합니다</li>
+                <li class="risk-list-item">투자 전 반드시 자격을 갖춘 금융 전문가와 상담해야 합니다</li>
+                <li class="risk-list-item">본인의 재정 상황과 위험 허용 능력을 신중히 고려해야 합니다</li>
+                <li class="risk-list-item">투자 상품의 약관 및 투자설명서를 충분히 검토해야 합니다</li>
+                <li class="risk-list-item">분산 투자를 통해 위험을 관리해야 합니다</li>
+            </ul>
+
+            <h2 class="risk-section-heading">4. 세미나 운영진 면책사항</h2>
+            <div class="disclaimer-box">
+                <h3 class="risk-subsection-title">완전 면책 조항</h3>
+                <p class="risk-content-paragraph">
+                    세미나 운영진, 강연자, 관련 기관은 다음과 같은 사항에 대해 어떠한 책임도 지지 않습니다:
+                </p>
+                <ul class="risk-list-items">
+                    <li class="risk-list-item">세미나 내용을 바탕으로 한 투자 결정 및 그로 인한 손실</li>
+                    <li class="risk-list-item">제공된 정보의 정확성, 완전성, 적시성에 대한 보장</li>
+                    <li class="risk-list-item">시장 예측의 정확성 및 투자 성과</li>
+                    <li class="risk-list-item">세미나 참가로 인한 직간접적 손해</li>
+                    <li class="risk-list-item">기술적 문제로 인한 세미나 진행 차질</li>
+                </ul>
+            </div>
+
+            <h2 class="risk-section-heading">5. 특별 위험 경고사항</h2>
+            <div class="high-risk-warning-box">
+                <h3 style="color: #ef4444; margin-bottom: 15px;">🔴 고위험 투자 상품 관련 경고</h3>
+                <ul class="risk-list-items">
+                    <li class="risk-list-item">파생상품: 레버리지 효과로 인해 투자 원금을 초과하는 손실 가능</li>
+                    <li class="risk-list-item">해외 투자: 환율 변동, 정치적 위험, 규제 변경 위험</li>
+                    <li class="risk-list-item">신흥시장 투자: 높은 변동성과 유동성 부족 위험</li>
+                    <li class="risk-list-item">대안투자: 복잡한 구조와 높은 수수료, 제한적 유동성</li>
+                </ul>
+            </div>
+
+            <h2 class="risk-section-heading">6. 법적 준수사항</h2>
+            <div class="legal-compliance-box">
+                <h3 class="risk-subsection-title">규제 준수 및 법적 고지</h3>
+                <p class="risk-content-paragraph">
+                    본 세미나는 다음 법규를 준수합니다:
+                </p>
+                <ul class="risk-list-items">
+                    <li class="risk-list-item">자본시장과 금융투자업에 관한 법률</li>
+                    <li class="risk-list-item">금융소비자 보호에 관한 법률</li>
+                    <li class="risk-list-item">전자상거래 등에서의 소비자보호에 관한 법률</li>
+                    <li class="risk-list-item">개인정보보호법</li>
+                </ul>
+                <p class="risk-content-paragraph">
+                    <strong>투자자 보호 안내:</strong> 금융분쟁조정위원회(1332), 금융감독원 민원센터(1332) 등을 통해 분쟁 조정을 신청할 수 있습니다.
+                </p>
+            </div>
+
+            <h2 class="risk-section-heading">7. 최종 확인사항</h2>
+            <div class="high-risk-warning-box">
+                <p class="emphasis-text" style="text-align: center; margin-bottom: 20px;">
+                    세미나 참가 전 다음 사항을 반드시 확인하시기 바랍니다:
+                </p>
+                <ul class="risk-list-items">
+                    <li class="risk-list-item">본 위험 경고문을 완전히 이해했습니다</li>
+                    <li class="risk-list-item">투자에는 원금 손실의 위험이 있음을 인지했습니다</li>
+                    <li class="risk-list-item">세미나 내용은 투자 권유가 아님을 확인했습니다</li>
+                    <li class="risk-list-item">모든 투자 결정은 본인 책임임을 동의합니다</li>
+                    <li class="risk-list-item">추가적인 전문가 상담이 필요함을 인지했습니다</li>
+                </ul>
+            </div>
+
+            <div class="medium-risk-notice">
+                <p style="text-align: center; font-weight: bold; color: #f59e0b; font-size: 18px;">
+                    📋 중요: 위험을 충분히 이해하지 못했거나 동의하지 않는 경우, 
+                    세미나 참가를 중단하시기 바랍니다.
+                </p>
+            </div>
+
+            <div class="disclaimer-box">
+                <h3 class="risk-subsection-title">문의 및 추가 정보</h3>
+                <p class="risk-content-paragraph">
+                    <strong>세미나 관련 문의:</strong> support@economy-night.kr<br>
+                    <strong>위험 관련 상담:</strong> risk@economy-night.kr<br>
+                    <strong>운영진:</strong> 경제의 밤 세미나팀<br>
+                    <strong>주소:</strong> 서울특별시 강남구 테헤란로 123
+                </p>
+            </div>
+
+            <button class="back-to-main-button" onclick="history.back()">
+                메인 페이지로 돌아가기
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // 다크 모드 지원
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+
+        // 경고 효과 추가
+        document.addEventListener('DOMContentLoaded', function() {
+            const warningBoxes = document.querySelectorAll('.high-risk-warning-box');
+            warningBoxes.forEach(box => {
+                box.style.animation = 'warning-pulse 3s ease-in-out infinite';
+            });
+        });
+
+        // CSS 애니메이션 추가
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes warning-pulse {
+                0%, 100% { 
+                    border-color: #ef4444; 
+                    box-shadow: 0 0 10px rgba(239,68,68,0.3);
+                }
+                50% { 
+                    border-color: #dc2626; 
+                    box-shadow: 0 0 20px rgba(239,68,68,0.6);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
