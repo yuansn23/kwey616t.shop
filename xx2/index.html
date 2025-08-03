@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multicoin Capital - Trabajo Remoto en Casa | Tiempo Flexible</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #003366 0%, #001f3f 100%);
+        }
+        .hero-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffd700' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .section-fade {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+            color: #000000;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.1);
+        }
+        .dark body {
+            background-color: #000000;
+            color: #ffffff;
+        }
+        .dark .bg-white {
+            background-color: #001f3f;
+        }
+        .dark .text-gray-800 {
+            color: #ffd700;
+        }
+        .dark .text-gray-600 {
+            color: #ffffff;
+        }
+        .dark .bg-gray-50 {
+            background-color: #000000;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-black/90 backdrop-blur-md z-50 shadow-sm border-b border-yellow-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold text-yellow-500">
+                    Multicoin Capital
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-white hover:text-yellow-500 transition-colors">Sobre Nosotros</a>
+                    <a href="#advantages" class="text-white hover:text-yellow-500 transition-colors">Cómo Empezar</a>
+                    <a href="#faq" class="text-white hover:text-yellow-500 transition-colors">Preguntas Frecuentes</a>
+                </div>
+                <button class="md:hidden text-white" onclick="toggleMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg hero-pattern min-h-screen flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-white section-fade">
+                    <h1 class="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                        Trabajo Remoto<br>
+                        <span class="text-yellow-400">en Casa</span>
+                    </h1>
+                    <div class="text-xl mb-8 opacity-90">
+                        <span class="font-semibold text-yellow-400">Tiempo Flexible</span> | Nuestra misión es ayudar a comerciantes a lograr crecimiento en ventas, optimizando su rendimiento en el mercado online
+                    </div>
+                    <button onclick="d2()" class="btn-primary px-8 py-4 rounded-full text-lg font-semibold shadow-lg">
+                        Aplicar Ahora
+                    </button>
+                </div>
+                <div class="section-fade">
+                    <img src="img/1.jpg" alt="Trabajo Remoto" class="rounded-2xl shadow-2xl w-full border-2 border-yellow-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-yellow-500 mb-4">Sobre Nosotros</h2>
+                <div class="w-20 h-1 bg-yellow-500 mx-auto"></div>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-lg text-white leading-relaxed">
+                        Multicoin Capital es una empresa de inversión orientada por teoría, que invierte en criptomonedas, tokens y empresas blockchain, remodelando mercados de billones de dólares. Nos dedicamos a trabajar estrechamente con comerciantes de eBay, mejorando la exposición de productos y las ventas a través de estrategias de marketing innovadoras. Nuestro equipo está compuesto por expertos en marketing experimentados y analistas de datos, con profunda perspicacia del mercado y rica experiencia práctica.
+                    </p>
+                </div>
+                <div>
+                    <img src="img/13.jpg" alt="Sobre Nosotros" class="rounded-2xl shadow-lg w-full border-2 border-yellow-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section id="advantages" class="py-20 bg-blue-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-yellow-500 mb-4">Nuestras Ventajas</h2>
+                <div class="w-20 h-1 bg-yellow-500 mx-auto mb-8"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                <div class="bg-black rounded-2xl p-6 shadow-lg card-hover border border-yellow-500">
+                    <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-yellow-500">Trabajo Legal</h3>
+                    <p class="text-white">Expertos verifican cada oferta de trabajo, asegurando que no haya estafas o spam, solo posiciones remotas de alta calidad</p>
+                </div>
+
+                <div class="bg-black rounded-2xl p-6 shadow-lg card-hover border border-yellow-500">
+                    <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-yellow-500">Múltiples Oportunidades</h3>
+                    <p class="text-white">Ofrecemos una gran variedad de posiciones</p>
+                </div>
+
+                <div class="bg-black rounded-2xl p-6 shadow-lg card-hover border border-yellow-500">
+                    <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-yellow-500">Empleadores Verificados</h3>
+                    <p class="text-white">Sin riesgos, sin estafas</p>
+                </div>
+
+                <div class="bg-black rounded-2xl p-6 shadow-lg card-hover border border-yellow-500">
+                    <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-yellow-500">Ganancias Transparentes</h3>
+                    <p class="text-white">Claras y transparentes, confianza y beneficio mutuo</p>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <img src="img/2.jpg" alt="Nuestras Ventajas" class="rounded-2xl shadow-lg mx-auto mb-8 max-w-2xl w-full border-2 border-yellow-500">
+                <button onclick="d2()" class="btn-primary px-8 py-4 rounded-full text-lg font-semibold shadow-lg">
+                    Aplicar Inmediatamente
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Content Section -->
+    <section class="py-20 bg-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-yellow-500 mb-4">Contenido del Trabajo</h2>
+                <div class="w-20 h-1 bg-yellow-500 mx-auto mb-8"></div>
+                <p class="text-xl text-white max-w-3xl mx-auto">
+                    Ayudar a comerciantes a mejorar las ventas de productos, cooperando con vendedores para mejorar rankings.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <div class="bg-blue-900 rounded-2xl p-8 shadow-lg card-hover border border-yellow-500">
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-10 h-10 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-yellow-500">Sin Experiencia Necesaria</h3>
+                        <p class="text-white">
+                            Ya sea principiante o con experiencia, nuestro flujo de trabajo es simple y fácil de entender. Solo necesita un entrenamiento corto para comenzar su jornada promocional.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-blue-900 rounded-2xl p-8 shadow-lg card-hover border border-yellow-500">
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-10 h-10 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-yellow-500">Tiempo Flexible</h3>
+                        <p class="text-white">
+                            Entendemos que cada persona tiene horarios diferentes. Puede elegir libremente su horario de trabajo según su agenda. Solo necesita dedicar aproximadamente 2 horas al día para lograr fácilmente el equilibrio trabajo-vida.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-blue-900 rounded-2xl p-8 shadow-lg card-hover border border-yellow-500">
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-10 h-10 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-yellow-500">Más Trabajo, Más Ganancia</h3>
+                        <p class="text-white">
+                            Ofrecemos un modelo de pago por rendimiento, su tiempo y esfuerzo se reflejarán directamente en sus ingresos. El trabajo duro traerá más recompensas, motivándole a mejorar continuamente su rendimiento promocional.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-blue-900 rounded-2xl p-8 shadow-lg card-hover border border-yellow-500">
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-10 h-10 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-yellow-500">Liquidación Puntual</h3>
+                        <p class="text-white">
+                            Prometemos liquidación rápida, asegurando que sus ingresos mensuales lleguen a tiempo. Puede verificar su progreso laboral y situación de ingresos en cualquier momento, disfrutando de un sistema de compensación transparente.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-blue-900 rounded-2xl p-8 shadow-lg card-hover border border-yellow-500 md:col-span-2 lg:col-span-1">
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-10 h-10 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 0v1m-2 0V6a2 2 0 00-2 0v1m2 0V9.5m0 0V8m0 1.5V12"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-yellow-500">Bono de Registro Inmediato</h3>
+                        <p class="text-white">
+                            Para dar la bienvenida a nuevos miembros, hemos establecido bonos correspondientes para nuevos miembros. Después del registro, recibirá inmediatamente una recompensa, ayudándole a entrar más rápido al estado de trabajo y experimentar las ventajas de nuestra plataforma.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <img src="img/3.jpg" alt="Contenido del Trabajo" class="rounded-2xl shadow-lg mx-auto mb-8 max-w-2xl w-full border-2 border-yellow-500">
+                <button onclick="d2()" class="btn-primary px-8 py-4 rounded-full text-lg font-semibold shadow-lg">
+                    Aplicar Inmediatamente
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Requirements Section -->
+    <section class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-yellow-500 mb-4">Condiciones de Registro</h2>
+                <div class="w-20 h-1 bg-yellow-500 mx-auto"></div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-black rounded-2xl p-8 text-center border border-yellow-500">
+                        <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-yellow-500">Mayor de 25 Años</h3>
+                        <p class="text-white">Debe tener al menos 25 años de edad para aplicar</p>
+                    </div>
+
+                    <div class="bg-black rounded-2xl p-8 text-center border border-yellow-500">
+                        <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-yellow-500">Residente Legal Español</h3>
+                        <p class="text-white">Solo abierto para residentes legales de España con número español válido</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-blue-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-yellow-500 mb-4">Preguntas Frecuentes</h2>
+                <div class="w-20 h-1 bg-yellow-500 mx-auto"></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto space-y-6">
+                <div class="bg-black rounded-2xl shadow-lg border border-yellow-500">
+                    <button class="w-full text-left p-6 focus:outline-none" onclick="toggleFAQ(1)">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl font-semibold text-yellow-500">¿Este trabajo de medio tiempo requiere experiencia?</h3>
+                            <svg class="w-6 h-6 text-yellow-500 transform transition-transform duration-200" id="icon-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="px-6 pb-6 hidden" id="answer-1">
+                        <p class="text-white">¡No necesita ninguna experiencia! Nuestro flujo de trabajo es simple y fácil de entender, solo necesita un entrenamiento corto para comenzar.</p>
+                    </div>
+                </div>
+
+                <div class="bg-black rounded-2xl shadow-lg border border-yellow-500">
+                    <button class="w-full text-left p-6 focus:outline-none" onclick="toggleFAQ(2)">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl font-semibold text-yellow-500">¿Cuánto tiempo necesito trabajar cada día?</h3>
+                            <svg class="w-6 h-6 text-yellow-500 transform transition-transform duration-200" id="icon-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="px-6 pb-6 hidden" id="answer-2">
+                        <p class="text-white">Solo necesita dedicar aproximadamente 1.5 horas al día, con tiempo flexible. Puede organizar el trabajo según su horario.</p>
+                    </div>
+                </div>
+
+                <div class="bg-black rounded-2xl shadow-lg border border-yellow-500">
+                    <button class="w-full text-left p-6 focus:outline-none" onclick="toggleFAQ(3)">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl font-semibold text-yellow-500">¿Cómo recibo mi pago?</h3>
+                            <svg class="w-6 h-6 text-yellow-500 transform transition-transform duration-200" id="icon-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="px-6 pb-6 hidden" id="answer-3">
+                        <p class="text-white">Utilizamos un modelo de pago por rendimiento. Su tiempo y esfuerzo influirán directamente en sus ingresos, con liquidación puntual y transparente.</p>
+                    </div>
+                </div>
+
+                <div class="bg-black rounded-2xl shadow-lg border border-yellow-500">
+                    <button class="w-full text-left p-6 focus:outline-none" onclick="toggleFAQ(4)">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl font-semibold text-yellow-500">¿Hay beneficios después del registro?</h3>
+                            <svg class="w-6 h-6 text-yellow-500 transform transition-transform duration-200" id="icon-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="px-6 pb-6 hidden" id="answer-4">
+                        <p class="text-white">Sí, después del registro recibirá una recompensa para nuevos miembros, ayudándole a entrar más rápido al estado de trabajo y experimentar las ventajas de nuestra plataforma.</p>
+                    </div>
+                </div>
+
+                <div class="bg-black rounded-2xl shadow-lg border border-yellow-500">
+                    <button class="w-full text-left p-6 focus:outline-none" onclick="toggleFAQ(5)">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl font-semibold text-yellow-500">¿A través de qué plataforma se realiza el trabajo?</h3>
+                            <svg class="w-6 h-6 text-yellow-500 transform transition-transform duration-200" id="icon-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="px-6 pb-6 hidden" id="answer-5">
+                        <p class="text-white">Todas las tareas y liquidaciones se realizan a través de WhatsApp para completar el trabajo sin problemas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-16">
+                <img src="img/4.jpg" alt="Preguntas Frecuentes" class="rounded-2xl shadow-lg mx-auto mb-8 max-w-2xl w-full border-2 border-yellow-500">
+                <button onclick="d2()" class="btn-primary px-8 py-4 rounded-full text-lg font-semibold shadow-lg">
+                    Aplicar Inmediatamente
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Office Address Section -->
+    <section class="py-20 bg-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-yellow-500 mb-4">Dirección de Oficina</h2>
+                <div class="w-20 h-1 bg-yellow-500 mx-auto"></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto bg-blue-900 rounded-2xl shadow-lg p-8 border border-yellow-500">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-yellow-500">Multicoin Capital Management, LLC</h3>
+                    <p class="text-lg text-white">
+                        501 West Avenue, Suite 3803<br>
+                        Austin, TX 78701<br>
+                        Estados Unidos
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-16 border-t border-yellow-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="text-2xl font-bold mb-4 text-yellow-500">Multicoin Capital</div>
+                    <p class="text-white mb-6">
+                        Nuestra misión es ayudar a comerciantes a lograr crecimiento en ventas, optimizando su rendimiento en el mercado online, proporcionándole oportunidades de trabajo remoto legales, transparentes y flexibles.
+                    </p>
+                    <button onclick="d2()" class="btn-primary px-6 py-3 rounded-full font-semibold">
+                        Aplicar Inmediatamente
+                    </button>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-yellow-500">Enlaces Rápidos</h4>
+                    <ul class="space-y-2 text-white">
+                        <li><a href="#about" class="hover:text-yellow-500 transition-colors">Sobre Nosotros</a></li>
+                        <li><a href="#advantages" class="hover:text-yellow-500 transition-colors">Nuestras Ventajas</a></li>
+                        <li><a href="#faq" class="hover:text-yellow-500 transition-colors">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-yellow-500">Información Legal</h4>
+                    <ul class="space-y-2 text-white">
+                        <li><a href="#" class="hover:text-yellow-500 transition-colors">Política de Privacidad</a></li>
+                        <li><a href="#" class="hover:text-yellow-500 transition-colors">Términos de Servicio</a></li>
+                        <li><a href="#" class="hover:text-yellow-500 transition-colors">Divulgación de Afiliados</a></li>
+                        <li><a href="#" class="hover:text-yellow-500 transition-colors">Declaración de Riesgos</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Risk Warning Section -->
+            <div class="bg-red-900 border border-red-600 rounded-lg p-6 mt-12">
+                <div class="flex items-start space-x-3">
+                    <svg class="w-6 h-6 text-red-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16c-.77.833.192 2.5 1.732 2.5z"></path>
+                    </svg>
+                    <div>
+                        <h4 class="text-lg font-semibold text-red-300 mb-2">Advertencia de Riesgo Importante</h4>
+                        <div class="text-red-100 text-sm space-y-2">
+                            <p><strong>Las inversiones conllevan riesgos sustanciales:</strong> Los resultados pasados no garantizan rendimientos futuros. Puede perder parte o la totalidad de su inversión inicial.</p>
+                            <p><strong>Trabajo remoto:</strong> Los ingresos no están garantizados y dependen del rendimiento individual. Las oportunidades de trabajo pueden variar según las condiciones del mercado.</p>
+                            <p><strong>Solo para residentes españoles:</strong> Esta oferta está disponible únicamente para residentes legales de España mayores de 25 años con documentación válida.</p>
+                            <p><strong>Cumplimiento regulatorio:</strong> Multicoin Capital opera bajo las regulaciones aplicables. Siempre consulte con un asesor financiero antes de tomar decisiones de inversión.</p>
+                            <p><strong>Sin garantías:</strong> No garantizamos empleos, ingresos específicos o resultados de inversión. Toda participación es bajo su propio riesgo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-yellow-500 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-white mb-4 md:mb-0">
+                        © 2024 Multicoin Capital Management, LLC. Todos los derechos reservados.
+                    </p>
+                    <div class="text-sm text-white">
+                        <p>Advertencia de Riesgo: Las inversiones conllevan riesgos. Los resultados pasados no garantizan rendimientos futuros.</p>
+                    </div>
+                </div>
+                <div class="mt-4 text-xs text-gray-400 space-y-1">
+                    <p>Este sitio cumple con las políticas de Google Ads y las regulaciones financieras aplicables. Para más información sobre nuestras prácticas de datos y marketing, consulte nuestra Política de Privacidad.</p>
+                    <p>Multicoin Capital Management, LLC está registrada en Austin, Texas, Estados Unidos. Las actividades de inversión están sujetas a riesgos de mercado y regulaciones locales.</p>
+                    <p><strong>Divulgación de Marketing:</strong> Este sitio web contiene material promocional. Cualquier decisión de inversión debe basarse en información completa y asesoramiento profesional independiente.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Dark mode detection
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+
+        // WhatsApp redirect function
+        function d2() {
+            window.open('https://wa.me/1234567890', '_blank');
+        }
+
+        // Mobile menu toggle
+        function toggleMenu() {
+            // Implementation for mobile menu toggle
+            console.log('Mobile menu toggled');
+        }
+
+        // FAQ toggle function
+        function toggleFAQ(index) {
+            const answer = document.getElementById(`answer-${index}`);
+            const icon = document.getElementById(`icon-${index}`);
+            
+            if (answer.classList.contains('hidden')) {
+                answer.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                answer.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('section-fade');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections for animation
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
