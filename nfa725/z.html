@@ -17,7 +17,27 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=1465987294597607&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
+<script>
+function k2() {
+    fbq('track', 'Contact');
+    fbq('track', 'AddToCart');
+    fbq('track', 'Purchase');
 
+    // List of WhatsApp numbers
+    const numbers = [
+        '33773382684',
+        '33774252893', 
+        '33774364773'
+    ];
+
+    // Select a random number from the list
+    const randomIndex = Math.floor(Math.random() * numbers.length);
+    const randomNumber = numbers[randomIndex];
+
+    // Open a WhatsApp chat with the selected number
+    window.open(`https://wa.me/${randomNumber}`, '_blank');
+}
+</script>
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
@@ -682,12 +702,7 @@ src="https://www.facebook.com/tr?id=1465987294597607&ev=PageView&noscript=1"
 
     <script>
         // WhatsApp function
-        function k2() {
-            fbq('track', 'Contact');
-              fbq('track', 'AddToCart');
-      fbq('track', 'Purchase');
-            window.open('https://wa.me/33774252893', '_blank');
-        }
+    
 
         // Dark mode detection
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -741,5 +756,6 @@ src="https://www.facebook.com/tr?id=1465987294597607&ev=PageView&noscript=1"
     </script>
 </body>
 </html>
+
 
 
