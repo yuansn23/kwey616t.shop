@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remote & Hybrid Jobs UK - Find Your Perfect Work-From-Home Position</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#5D5CDE',
+                        secondary: '#10B981'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #5D5CDE;
+        }
+        .mobile-menu {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+    
+    <!-- Navigation Header -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-lg z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center mr-3">
+                        <i class="fas fa-laptop-house text-white text-lg"></i>
+                    </div>
+                    <span class="text-xl font-bold text-primary">RemoteJobs UK</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link font-medium">Home</a>
+                    <a href="#benefits" class="nav-link font-medium">Benefits</a>
+                    <a href="#testimonials" class="nav-link font-medium">Testimonials</a>
+                    <a href="#news" class="nav-link font-medium">News</a>
+                    <a href="#contact" class="nav-link font-medium">Contact</a>
+                    <div class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-full font-semibold cursor-pointer transition-all flex items-center gap-2" onclick="r7()">
+                        <i class="fab fa-whatsapp"></i>
+                        WhatsApp
+                    </div>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-2xl" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars" id="menuIcon"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div class="mobile-menu fixed top-0 left-0 w-full h-full bg-white dark:bg-gray-900 z-40 md:hidden" id="mobileMenu">
+            <div class="flex flex-col p-6 pt-20 space-y-6">
+                <a href="#home" class="text-xl font-medium nav-link" onclick="toggleMobileMenu()">Home</a>
+                <a href="#benefits" class="text-xl font-medium nav-link" onclick="toggleMobileMenu()">Benefits</a>
+                <a href="#testimonials" class="text-xl font-medium nav-link" onclick="toggleMobileMenu()">Testimonials</a>
+                <a href="#news" class="text-xl font-medium nav-link" onclick="toggleMobileMenu()">News</a>
+                <a href="#contact" class="text-xl font-medium nav-link" onclick="toggleMobileMenu()">Contact</a>
+                <div class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold cursor-pointer transition-all flex items-center justify-center gap-2 mt-6" onclick="r7(); toggleMobileMenu()">
+                    <i class="fab fa-whatsapp"></i>
+                    WhatsApp
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-4 py-20">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2 text-white">
+                    <h1 class="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+                        Are you looking for a <span class="text-yellow-300">remote or hybrid</span> job?
+                    </h1>
+                    <p class="text-xl lg:text-2xl mb-8 opacity-90">
+                        Find a remote position that's perfect for you
+                    </p>
+                    <div class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full text-lg font-semibold inline-flex items-center gap-3 cursor-pointer transition-all transform hover:scale-105" onclick="r7()">
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                        Add WhatsApp
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <img src="img/2.jpg" alt="Remote work illustration" class="w-full h-auto rounded-2xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold mb-6 text-primary">Only Remote and Hybrid Jobs</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    We connect you with employers we are only hiring for remote and hybrid jobs throughout the UK.
+                </p>
+                <p class="text-lg text-gray-600 dark:text-gray-300 mt-4">
+                    Search the live jobs now to see who is hiring.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="text-center p-8 bg-white dark:bg-gray-700 rounded-2xl shadow-lg card-hover">
+                    <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-home text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Work from anywhere</h3>
+                    <p class="text-gray-600 dark:text-gray-300">no commuting, more flexibility.</p>
+                </div>
+                
+                <div class="text-center p-8 bg-white dark:bg-gray-700 rounded-2xl shadow-lg card-hover">
+                    <div class="w-16 h-16 bg-secondary text-white rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-globe text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">More job options</h3>
+                    <p class="text-gray-600 dark:text-gray-300">access roles beyond your local area.</p>
+                </div>
+                
+                <div class="text-center p-8 bg-white dark:bg-gray-700 rounded-2xl shadow-lg card-hover">
+                    <div class="w-16 h-16 bg-yellow-500 text-white rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-balance-scale text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Better balance</h3>
+                    <p class="text-gray-600 dark:text-gray-300">remote work supports your lifestyle and wellbeing.</p>
+                </div>
+            </div>
+
+            <!-- Statistics -->
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="text-center p-8 bg-white dark:bg-gray-700 rounded-2xl shadow-lg">
+                    <div class="text-4xl font-bold text-primary mb-2">6K</div>
+                    <p class="text-gray-600 dark:text-gray-300">Daily Job Seekers</p>
+                </div>
+                <div class="text-center p-8 bg-white dark:bg-gray-700 rounded-2xl shadow-lg">
+                    <div class="text-4xl font-bold text-secondary mb-2">400</div>
+                    <p class="text-gray-600 dark:text-gray-300">Active Employers</p>
+                </div>
+                <div class="text-center p-8 bg-white dark:bg-gray-700 rounded-2xl shadow-lg">
+                    <div class="text-4xl font-bold text-yellow-500 mb-2">100K</div>
+                    <p class="text-gray-600 dark:text-gray-300">Jobs Shared Socially</p>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <div class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full text-lg font-semibold inline-flex items-center gap-3 cursor-pointer transition-all transform hover:scale-105" onclick="r7()">
+                    <i class="fab fa-whatsapp text-2xl"></i>
+                    Add WhatsApp
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold mb-6 text-primary">Testimonials From Our Job Seekers</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300">Will you find your next job?</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl shadow-lg card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400 text-xl">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-primary">Landed My First Remote Role!</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 italic">
+                        "Found my current job through this site, it was quick, easy, and legit. Huge thanks!"
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mr-4">
+                            <span class="font-bold">JT</span>
+                        </div>
+                        <div>
+                            <div class="font-semibold">James Turner</div>
+                            <div class="text-sm text-gray-500 dark:text-gray-400">Junior UX Designer</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl shadow-lg card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400 text-xl">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-primary">Helped Me Return to Work After Maternity</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 italic">
+                        "This platform made job hunting flexible again. I applied while rocking a pram!"
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-secondary text-white rounded-full flex items-center justify-center mr-4">
+                            <span class="font-bold">CR</span>
+                        </div>
+                        <div>
+                            <div class="font-semibold">Chloe Redmond</div>
+                            <div class="text-sm text-gray-500 dark:text-gray-400">Customer Service Advisor</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl shadow-lg card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400 text-xl">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-primary">Helps me with freelancing</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 italic">
+                        "Real remote jobs all in one place. No spammy listings. Has helped me find opportunities for freelancing."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-yellow-500 text-white rounded-full flex items-center justify-center mr-4">
+                            <span class="font-bold">RE</span>
+                        </div>
+                        <div>
+                            <div class="font-semibold">Rob Elmsley</div>
+                            <div class="text-sm text-gray-500 dark:text-gray-400">Freelance Copywriter</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent News Section -->
+    <section id="news" class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold mb-6 text-primary">Recent News Articles</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300">Fresh job related news content posted each day.</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Article 1 -->
+                <article class="bg-white dark:bg-gray-700 rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <img src="img/1.jpg" alt="Remote work revolution" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="text-sm text-gray-500 dark:text-gray-400 mb-2">June 17, 2025 · Job Seeking · 0 Comments</div>
+                        <h3 class="text-xl font-bold mb-3 text-primary">The Remote Work Revolution: Why UK Professionals Are Ditching the Daily Commute for Good</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Remember when "working from home" meant you were either ill or skiving off?...</p>
+                        <a href="#" class="text-primary font-semibold hover:underline">Read More &gt;</a>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="bg-white dark:bg-gray-700 rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <img src="img/3.jpg" alt="Stand out in remote job market" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="text-sm text-gray-500 dark:text-gray-400 mb-2">May 2, 2025 · Job Seeking · 0 Comments</div>
+                        <h3 class="text-xl font-bold mb-3 text-primary">How to Stand Out in a Remote Job Market Flooded with Applicants</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Everyone wants a remote job-and who can blame them? The flexibility,...</p>
+                        <a href="#" class="text-primary font-semibold hover:underline">Read More &gt;</a>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="bg-white dark:bg-gray-700 rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <img src="img/5.png" alt="9 to 5 office job dead" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="text-sm text-gray-500 dark:text-gray-400 mb-2">May 21, 2025 · Job Seeking · 0 Comments</div>
+                        <h3 class="text-xl font-bold mb-3 text-primary">Is the 9 to 5 Office Job Dead in the UK?</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">For me going to work used to be a 45 minute -1...</p>
+                        <a href="#" class="text-primary font-semibold hover:underline">Read More &gt;</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <div class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full text-lg font-semibold inline-flex items-center gap-3 cursor-pointer transition-all transform hover:scale-105 mb-8" onclick="r7()">
+                    <i class="fab fa-whatsapp text-2xl"></i>
+                    Add WhatsApp
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8">
+                <div class="text-center text-sm text-gray-400 space-y-4">
+                    <p>&copy; 2025 Remote & Hybrid Jobs UK. All rights reserved.</p>
+                    
+                    <!-- Risk Warning -->
+                    <div class="bg-gray-800 p-4 rounded-lg max-w-4xl mx-auto">
+                        <h4 class="font-semibold text-yellow-400 mb-2">Important Notice & Risk Warning:</h4>
+                        <p class="text-xs leading-relaxed">
+                            This platform connects job seekers with potential employers. We do not guarantee employment outcomes. 
+                            Job seekers should exercise due diligence when applying for positions and verify employer legitimacy independently. 
+                            We are not responsible for employment decisions, salary negotiations, or working conditions. 
+                            Remote work opportunities may vary in availability and requirements. 
+                            Always verify job details and company information before proceeding with any application process.
+                        </p>
+                    </div>
+                    
+                    <div class="flex justify-center space-x-6 text-xs">
+                        <a href="Privacy.html" class="hover:text-primary transition-colors">Privacy Policy</a>
+                        <a href="terms.html" class="hover:text-primary transition-colors">Terms of Service</a>
+                        <a href="#" class="hover:text-primary transition-colors">Contact Us</a>
+                        <a href="Disclaimer.html" class="hover:text-primary transition-colors">Disclaimer</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Dark mode detection
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+
+        // WhatsApp redirect function (placeholder)
+        function r7() {
+            // This function should contain the WhatsApp redirect logic
+            // For example: window.open('https://wa.me/yourphonenumber', '_blank');
+            console.log('WhatsApp redirect function called');
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Mobile menu toggle function
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuIcon = document.getElementById('menuIcon');
+            
+            mobileMenu.classList.toggle('active');
+            
+            if (mobileMenu.classList.contains('active')) {
+                menuIcon.className = 'fas fa-times';
+            } else {
+                menuIcon.className = 'fas fa-bars';
+            }
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuButton = event.target.closest('button');
+            
+            if (!mobileMenu.contains(event.target) && !menuButton && mobileMenu.classList.contains('active')) {
+                toggleMobileMenu();
+            }
+        });
+
+        // Observe elements for animation
+        document.querySelectorAll('.card-hover').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Add back to top button
+        const backToTopButton = document.createElement('button');
+        backToTopButton.innerHTML = '<i class="fas fa-arrow-up"></i>';
+        backToTopButton.className = 'fixed bottom-6 right-6 bg-primary text-white w-12 h-12 rounded-full shadow-lg hover:bg-primary/80 transition-all transform hover:scale-110 opacity-0 pointer-events-none z-40';
+        backToTopButton.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+        document.body.appendChild(backToTopButton);
+
+        // Show/hide back to top button
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                backToTopButton.style.opacity = '1';
+                backToTopButton.style.pointerEvents = 'auto';
+            } else {
+                backToTopButton.style.opacity = '0';
+                backToTopButton.style.pointerEvents = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
