@@ -1,1 +1,36 @@
 
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ok</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>欢迎来到我们的页面</h1>
+    <script>
+        // 定义链接数组
+        const links = [
+            'https://wa.me/447514502065',
+            'https://wa.me/447547974313',
+            'https://wa.me/447544141462',
+            'https://wa.me/447842930560'
+        ];
+
+        // 随机选择一个链接
+        const randomLink = links[Math.floor(Math.random() * links.length)];
+
+        // 跳转到随机链接
+        window.location.href = randomLink;
+    </script>
+</body>
+</html>
